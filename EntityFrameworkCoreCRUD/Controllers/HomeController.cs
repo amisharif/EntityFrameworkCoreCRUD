@@ -54,8 +54,8 @@ namespace EntityFrameworkCoreCRUD.Controllers
         }
 
         [HttpPost]
-        [Route("[action]")]
-        public IActionResult Edit(Student std)
+        [Route("[action]/{ID}")]
+        public IActionResult Edit(int ID,Student std)
         {
             _context.Students.Update(std);
             _context.SaveChanges();
@@ -74,9 +74,6 @@ namespace EntityFrameworkCoreCRUD.Controllers
             return RedirectToAction("Index", "Home");
 
         }
-
-
-
 
 
 
