@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Student
+
+<form asp-controller="Home" asp-action="Create" method="post">
+
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Dept">Dept</label>
+        <input asp-for="Dept" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender">Gender</label>
+        <input asp-for="Gender" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
